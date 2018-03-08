@@ -30,7 +30,9 @@ def RRI_2_LFHF_ls(dataset):
     rri = dataset["rri"]
     ibi = np.array(rri)
 
-    f = np.linspace(0.01, 1.0, 1000)
+    phi = 4.0 * np.pi
+
+    f = np.linspace(0.001, phi, 1000)
 
     Pgram = lombscargle(t, ibi, f, normalize=True)
 

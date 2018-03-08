@@ -7,7 +7,7 @@ from dateutil import parser
 from pytz import timezone
 
 def main():
-    df = pd.read_csv('~/Dropbox/export4.csv', names=["time", "hr"])
+    df = pd.read_csv('./data/export4.csv', names=["time", "hr"])
     df = df.drop(0)
     start_time = df.iloc[0, 0]
     st = int(parser.parse(start_time).timestamp())
